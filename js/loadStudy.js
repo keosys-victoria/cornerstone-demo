@@ -10,7 +10,7 @@ function loadStudy(studyViewer, viewportModel, studyId) {
 
         function initViewports() {
             imageViewer.forEachElement(function(el) {
-                cornerstone.enable(el);
+                cornerstone.enable(el, {'renderer': 'webgl'});
                 $(el).droppable({
                     drop : function(evt, ui) {
                         var fromStack = $(ui.draggable.context).data('stack'), toItem = $(this).data('index');
