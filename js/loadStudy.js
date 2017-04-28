@@ -71,7 +71,7 @@ function loadStudy(studyViewer, viewportModel, studyId) {
                 for (var i = 0; i < numberOfFrames; i++) {
                     var imageId = series.instanceList[0].imageId + "?frame=" + i;
                     if (imageId.substr(0, 4) !== 'http') {
-                        imageId = "https://github.com/keosys-victoria/xtk-test/raw/master/" + imageId;
+                        imageId = "dicomweb://xtk-test.herokuapp.com/" + imageId;
                     }
                     stack.imageIds.push(imageId);
                 }
@@ -81,7 +81,7 @@ function loadStudy(studyViewer, viewportModel, studyId) {
                     var imageId = image.imageId;
 
                     if (image.imageId.substr(0, 4) !== 'http') {
-                        imageId = "https://github.com/keosys-victoria/xtk-test/raw/master/" + image.imageId;
+                        imageId = "dicomweb://xtk-test.herokuapp.com/" + image.imageId;
                     }
                     stack.imageIds.push(imageId);
                 });
